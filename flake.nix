@@ -23,7 +23,7 @@
             nativeBuildInputs = with pkgs; [
               (rust-bin.stable.latest.default.override {
                 extensions = [ "rust-src" ];
-                targets = [ "thumbv7em-none-eabihf" ];
+                targets = [ "thumbv7em-none-eabihf" "riscv32imac-unknown-none-elf" ];
               })
               rustc
               cargo
@@ -31,6 +31,8 @@
               gdb
               minicom
               cargo-binutils
+              cargo-generate
+              espflash
             ];
           };
         };
