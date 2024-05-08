@@ -33,6 +33,26 @@
               cargo-binutils
               cargo-generate
               espflash
+              pkg-config
+              alsa-lib
+            ];
+          };
+          nightly = pkgs.mkShell {
+            nativeBuildInputs = with pkgs; [
+              (rust-bin.selectLatestNightlyWith (toolchain: toolchain.default.override {
+                extensions = [ "rust-src" ];
+                targets = [ "thumbv7em-none-eabihf" "riscv32imac-unknown-none-elf" ];
+              }))
+              rustc
+              cargo
+              probe-rs
+              gdb
+              minicom
+              cargo-binutils
+              cargo-generate
+              espflash
+              pkg-config
+              alsa-lib
             ];
           };
         };
