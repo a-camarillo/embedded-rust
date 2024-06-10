@@ -12,7 +12,7 @@ esp-backtrace = { version = "0.11.0", features = [
     "panic-handler",
     "println",
 ] }
-esp-hal = { version = "0.17.0", features = [ "esp32c6" ] }
+esp-hal = { version = "0.18.0", features = [ "esp32c6" ] }
 esp-println = { version = "0.9.0", features = ["esp32c6", "log"] }
 log = { version = "0.4.20" }
 embedded-hal = { version = "1.0.0" }
